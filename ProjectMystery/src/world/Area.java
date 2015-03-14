@@ -29,5 +29,9 @@ public class Area {
 		}
 	}
 	
+	public String getLook(){
+		return lookOutput;
+	}
+	
 	
 }
