@@ -32,6 +32,7 @@ public class PhoneProgressTable {
 		if (check !=  null) {
 			return check.getPlayerArea();
 		}
+		return 0;
 	}
 	
 	
