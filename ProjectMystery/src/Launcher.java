@@ -15,13 +15,13 @@ public class Launcher {
 	{
 		TwilioRestClient client = new TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN);
 		// Build a filter for the MessageList
-		List<NameValuePair> params = new ArrayList<NameValuePair>();
-		params.add(new BasicNameValuePair("Body", "Horse Horse Horse"));
-		params.add(new BasicNameValuePair("To", "+447581650196"));
-		params.add(new BasicNameValuePair("From", "+44 121 285 5617"));
-		MessageFactory messageFactory = client.getAccount().getMessageFactory();
-		Message message = messageFactory.create(params);
-		System.out.println(message.getSid());
+//		List<NameValuePair> params = new ArrayList<NameValuePair>();
+//		params.add(new BasicNameValuePair("Body", "Horse Horse Horse"));
+//		params.add(new BasicNameValuePair("To", "+447581650196"));
+//		params.add(new BasicNameValuePair("From", "+44 121 285 5617"));
+//		MessageFactory messageFactory = client.getAccount().getMessageFactory();
+//		Message message = messageFactory.create(params);
+//		System.out.println(message.getSid());
 	}
 
 }
