@@ -19,8 +19,6 @@ public class Item implements Serializable {
 	private ArrayList<String> attributes;
 	private int id;
 
-	private boolean isSpawned;
-
 	public Item(Node object) {
 
 		actions = new ArrayList<Action>();

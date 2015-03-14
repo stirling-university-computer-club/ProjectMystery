@@ -1,21 +1,7 @@
-// A = area
-	// LOOK = area.look command
-// I = item
-
-<a id="0">
-	<look>You see dank memes</look>
-	<east attr="laptop.turnedOn">
-		<goto>1</goto>
-	</east>
-	<i name="laptop">
-		<attributes>turnedOff</attributes>
-		<a command="turn on">
-			<c attr="turnedOff">
-				<changeAttribute>turnedOff turnedOn</changeAttribute>
-			</c>
-	</i>
-</a>
-<a id="1">
-	<look>You see the dankest of maymays</look>
-</a>
+<?xml version="1.0" encoding="UTF-8"?>
+<area name="Corner" id="0">
+	<actionR command="look">
+		<output>You see dank memes</output>
+	</actionR>
+</area>
 	

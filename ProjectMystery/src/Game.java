@@ -20,7 +20,7 @@ public class Game {
 
 	Parser parser;
 
-	private int playerArea;
+	private int playerArea = 0;
 
 	public Game() {
 		areas = new ArrayList<Area>();
@@ -33,7 +33,7 @@ public class Game {
 
 			Document doc = db.parse(new File("res\\" + dataXML));
 
-			NodeList areaList = doc.getElementsByTagName("a");
+			NodeList areaList = doc.getElementsByTagName("area");
 			for (int i = 0; i < areaList.getLength(); i++) {
 				Element e = (Element) areaList.item(i);
 				areas.add(new Area(e, this));
@@ -43,14 +43,19 @@ public class Game {
 		}
 	}
 
+	public ArrayList<Area> getAreas(){
+		return areas;
+	}
+	
 	public void parser(ArrayList<Area> a, String s) {
 		String output;
 		try {
 			output = parser.logicCheck(this, s, a);
 		} catch (Exception e) {
+			e.printStackTrace();
 			output = "Now you've done it";
 		}
-		
+		System.out.println(output);
 		// Pass this back to the user.
 	}
 	
