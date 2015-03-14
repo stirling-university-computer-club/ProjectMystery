@@ -19,10 +19,15 @@ public class Game {
 
 	String dataXML = "game.xml";
 	ArrayList<Area> areas;
+	
+	Parser parser;
 
+	private int playerArea;
+	
 	public Game() {
 		areas = new ArrayList<Area>();
-
+		parser = new Parser();
+		
 		try {
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 			dbf.setNamespaceAware(true);
@@ -40,4 +45,13 @@ public class Game {
 		}
 	}
 
+	public void parser(ArrayList<Area> a, String s){
+		// Text this back to player
+		String output = parser.logicCheck(this, a, s);
+	}
+	
+	public int getPlayerArea(){
+		return playerArea;
+	}
+	
 }
