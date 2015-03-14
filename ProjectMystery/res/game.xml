@@ -4,11 +4,15 @@
 
 <a id="0">
 	<look>You see dank memes</look>
-	<east>
+	<east attr="laptop.turnedOn">
 		<goto>1</goto>
 	</east>
 	<i name="laptop">
 		<attributes>turnedOff</attributes>
+		<a command="turn on">
+			<c attr="turnedOff">
+				<changeAttribute>turnedOff turnedOn</changeAttribute>
+			</c>
 	</i>
 </a>
 <a id="1">
