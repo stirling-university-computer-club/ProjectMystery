@@ -20,10 +20,10 @@ public class PhoneProgressTable {
 		return phoneList.containsKey(phoneNo);
 	}
 	
-	public void modifyProgress(String phoneNo, int progress) {
+	public void modifyProgress(String phoneNo, String progress) {
 		Game check = phoneList.get(phoneList);
 		if (check != null) {
-			
+			check.parser(check.getAreas(), progress );
 		}
 	}
 	
