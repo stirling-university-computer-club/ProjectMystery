@@ -23,7 +23,7 @@ public class PhoneProgressTable {
 	public void modifyProgress(String phoneNo, int progress) {
 		Game check = phoneList.get(phoneList);
 		if (check != null) {
-			check.setPlayerArea(progress);
+			
 		}
 	}
 	
