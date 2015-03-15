@@ -175,10 +175,6 @@ public class Case implements Serializable {
 			area.applyEffect(effect[m], effectValue, m, gref,
 					area.isObject(data[1]));
 			break;
-		case 4:
-			areaByName(areas, effectValue).applyEffect(effect[m], effectValue,
-					m, gref, area.isObject(data[2]));
-			break;
 		default:
 			break;
 

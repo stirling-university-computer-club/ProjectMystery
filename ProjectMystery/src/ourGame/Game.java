@@ -1,4 +1,5 @@
 package ourGame;
+
 import java.io.File;
 import java.util.ArrayList;
 
@@ -20,10 +21,12 @@ public class Game {
 	ArrayList<Area> areas;
 
 	Parser parser;
+	boolean dead;
 
 	private int playerArea = 0;
 
 	public Game() {
+		dead = false;
 		areas = new ArrayList<Area>();
 		parser = new Parser();
 
@@ -44,24 +47,32 @@ public class Game {
 		}
 	}
 
-	public ArrayList<Area> getAreas(){
+	public ArrayList<Area> getAreas() {
 		return areas;
 	}
-	
+
 	public void parser(ArrayList<Area> a, String s) {
-		String output;
-		try {
-			output = parser.logicCheck(this, s, a);
-		} catch (Exception e) {
-			e.printStackTrace();
-			output = "Now you've done it";
-		}
-		System.out.println(output);
-		// Pass this back to the user.
+
+		if (!dead) {
+			String output;
+			try {
+				output = parser.logicCheck(this, s, a);
+			} catch (Exception e) {
+				e.printStackTrace();
+				output = "Now you've done it";
+			}
+			System.out.println(output);
+			// Pass this back to the user.
+		} else
+			System.out.println("Yer dead ya dank memes");
 	}
-	
+
 	public int getPlayerArea() {
 		return playerArea;
+	}
+
+	public void die() {
+		dead = true;
 	}
 
 	public void setPlayerArea(int value) {

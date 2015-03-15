@@ -54,7 +54,7 @@ public class Parser {
 			}
 
 		}
-		return "Invalid!"; // This will never happen
+		return "Fail #1"; // This will never happen
 	}
 
 	public String logicCheck(Game gref, String c, ArrayList<Area> areas)
@@ -96,11 +96,10 @@ public class Parser {
 		 */
 		Action action = item.getAction(c, false);
 		if (!(action == null))
-			testCases(areas, area, action, true, gref);
+			return testCases(areas, area, action, true, gref);
 		else {
 			return "Invalid action referencing item.";
 		}
-		return "Invalid!"; // This will never happen
 	}
 
 	public boolean isQuitting(String x) {
