@@ -11,6 +11,7 @@
     </actionR>
     <actionR command="go great unknown">
         <case effect="death">
+			<death>0</death>
             <output>You venture towards the great unknown</output>
             <output>As you reach the other side of the hall you feel accomplished</output>
             <output>However a piano then lands on top of you crushing your satisfaction and every bone in your body</output>
@@ -19,6 +20,7 @@
     <item name="door" id="0">
         <action command="open">
             <case effect="death">
+				<death>0</death>
                 <output>You push open the door and alarms start blaring, the security moves towards you</output>
                 <output>Being the brave person you are, you decide to turn tail and leg it</output>
                 <output>The door shuts behind you, as you reflect on what just happened a bolt of lighting strikes you</output>
@@ -31,6 +33,9 @@
             <output>You stare at the laptop to see only one word appearing on the screen: "Segfault"</output>
         </action>
     </item>
+</area>
+
+<area name="dicks" id="1">
 </area>
 
 </xml>

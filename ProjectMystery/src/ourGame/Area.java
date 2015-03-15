@@ -126,7 +126,7 @@ public class Area implements Serializable {
 		case "moveArea":
 			gref.setPlayerArea(Integer.parseInt(effectValues[x - 1]));
 			break;
-		case "die":
+		case "death":
 			gref.die();
 			break;
 		}

@@ -21,12 +21,11 @@ public class Game {
 	ArrayList<Area> areas;
 
 	Parser parser;
-	boolean dead;
+	private boolean dead = false;
 
 	private int playerArea = 0;
 
 	public Game() {
-		dead = false;
 		areas = new ArrayList<Area>();
 		parser = new Parser();
 
@@ -43,6 +42,7 @@ public class Game {
 				areas.add(new Area(e, this));
 			}
 		} catch (Exception e) {
+			e.printStackTrace();
 			System.out.println("go screw yourself"); // PG rating
 		}
 	}

@@ -7,6 +7,9 @@ public class Launcher {
 	public static void main(String[] args)
 	{
 		MessageSender msgSend = new MessageSender();
+		Game game = new Game();
+		game.parser(game.getAreas(), "open door");
+		game.parser(game.getAreas(), "go great unknown");
 	}
 	
 	public void makeMessageSender()
