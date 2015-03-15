@@ -1,17 +1,14 @@
-package com.twilio;
+package ourGame;
 
 
 public class Launcher {
-	Game game;
+	MessageSender msgSend;
 	
-	public Launcher()
+	public static void main(String[] args)
 	{
-		Game game = new Game();
-	}
-	
-	public static void main(String[] args){
-		Game game = new Game();
-		System.out.println(game.parser("look"));
+		MessageSender msgSend = new MessageSender();
+		WorkingGame game = new WorkingGame();
+		System.out.println(game.inputText("1", "look"));
 	}
 	
 	public void makeMessageSender()
@@ -19,9 +16,9 @@ public class Launcher {
 		MessageSender msgSend = new MessageSender();
 	}
 	
-	public Game getGame()
+	public MessageSender getMessageSender()
 	{
-		return game;
+		return msgSend;
 	}
 
 }
