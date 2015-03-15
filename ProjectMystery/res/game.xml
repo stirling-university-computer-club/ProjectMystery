@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<xml>
 <area name="Corner" id="0">
 	<actionR command="look">
 		<output>You in a hall sitting at a table surrounded by people on their laptops, typing up some uncomprehendable text</output>
@@ -14,7 +15,7 @@
             </case>
         </action>
     </item>
-    <item name="laptop" id="0">
+    <item name="laptop" id="1">
         <action command="look">
             <output>You stare at the laptop to see only one word appearing on the screen: "Segfault"</output>
         </action>
@@ -22,27 +23,19 @@
     <actionR command="go right">
          <output>You continue walking right until you fall over due to dizziness</output>
     </actionR>
-    <item name="rightHall" id="0">
+    <item name="rightHall" id="2">
         <action command="open">
             <case effect="moveArea">
                 <moveArea>2</moveArea>
                 <output>You venture towards the great unknown</output>
             </case>
         </action>
-    </item>
-    
+    </item>   
 </area>
 
-<area name="fireExitOutside" id="1">
-    <case effect="death">
-        <output>The door shuts behind you, as you reflect on what just happened a bolt of lighting strikes you</output>
-        <output>badluckbrian.jpeg</output>
-    </case>
+<area name="Hall" id="1">
 </area>
-	
-<area name="rightHall" id="2">
-    <case effect="death">
-        <output>As you reach the other side of the hall you feel accomplished</output>
-        <output>However a piano then lands on top of you crushing your satisfaction and every bone in your body</output>
-    </case>
+
+<area name="Hall2" id="2">
 </area>
+</xml>

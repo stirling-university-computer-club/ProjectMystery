@@ -44,7 +44,7 @@ public class Area implements Serializable {
 			Node action = actionList.item(i);
 			actions.add(new Action(action, true));
 		}
-		NodeList itemList = e.getElementsByTagName("object");
+		NodeList itemList = e.getElementsByTagName("item");
 		for (int i = 0; i < itemList.getLength(); i++) {
 			Node item = itemList.item(i);
 			items.add(new Item(item));
@@ -142,6 +142,8 @@ public class Area implements Serializable {
 	 */
 	public Item getItem(String name) {
 		for (int i = 0; i < items.size(); i++) {
+			//System.out.println(items.get(i).getName() + " is contained within "+name);
+			
 			if (name.contains(items.get(i).getName()))
 				return items.get(i);
 		}

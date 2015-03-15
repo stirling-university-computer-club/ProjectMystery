@@ -45,11 +45,6 @@ public class Item implements Serializable {
 		this.id = id;
 	}
 
-	// THIS IS FOR SPAWNING LOOT DROPS
-	/*
-	 * TODO: THIS SHIT
-	 */
-
 	public Action getAction(String command, boolean isRoom) {
 		for (int i = 0; i < actions.size(); i++) {
 			if (actions.get(i).isCommand(command, isRoom))

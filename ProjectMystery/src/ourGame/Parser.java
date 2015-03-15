@@ -48,7 +48,7 @@ public class Parser {
 					// If the loop ends and a case doesn't work, fail the
 					// action.
 					if (i == aCases.size() - 1) {
-						return "Invalid!";
+						return "No attributes fit the case";
 					}
 				}
 			}
@@ -79,7 +79,7 @@ public class Parser {
 		if (itemID == -1) {
 			boolean isRoomAction = area.checkForAction(c);
 			if (!isRoomAction) {
-				return "Invalid!";
+				return "Invalid area action.";
 			}
 
 			/**
@@ -98,7 +98,7 @@ public class Parser {
 		if (!(action == null))
 			testCases(areas, area, action, true, gref);
 		else {
-			return "Invalid!";
+			return "Invalid action referencing item.";
 		}
 		return "Invalid!"; // This will never happen
 	}
