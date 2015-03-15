@@ -1,4 +1,5 @@
-package ourGame;
+package com.twilio;
+
 
 public class WorkingGame {
 	
@@ -14,15 +15,17 @@ public class WorkingGame {
 		}
 		if (inputText.toLowerCase().equals("restart") || inputText.toLowerCase().equals("new game")) {
 			table.modifyProgress(mobile, 1);
+			inputText = "look";
 		}
 		if (table.getAreaProgress(mobile) == 1) {
-			if (inputText.toLowerCase().equals("look") || inputText.toLowerCase().equals("look around")) {
+			if (inputText.toLowerCase().equals("look") || inputText.toLowerCase().equals("look around") || inputText.toLowerCase().equals("start") || inputText.toLowerCase().equals("begin")) {
 				return "You are in a hall sitting on a chair surrounded by people with laptops, watching some uncomprehendable presentation. Infront of you is your own laptop. To your right is the entrance hall, to your left is a door marked push to open";
 			}
 			else if (inputText.toLowerCase().equals("look at laptop")) {
 				return "You stare at the laptop to see only one word appearing on the screen: \"Segfault\"";
 			}
 			else if (inputText.toLowerCase().equals("open door") || inputText.toLowerCase().equals("go left")) {
+				table.modifyProgress(mobile, 3);
 				return "You push open the door and alarms start blaring, the security moves towards you. Being the brave person you are, you decide to turn tail and leg it. The door shuts behind you, as you reflect on what just happened a bolt of lighting strikes you";
 			}
 			else if (inputText.toLowerCase().equals("go right")) {
@@ -33,19 +36,25 @@ public class WorkingGame {
 				return "I dont understand that command";
 			}
 		}
-		else if (table.getAreaProgress(mobile) == 2) {
+		if (table.getAreaProgress(mobile) == 2) {
 			if (inputText.toLowerCase().equals("look") || inputText.toLowerCase().equals("look around")) {
 				return "You see lots of tables covered in discarded food";
 			}
 			else if (inputText.toLowerCase().equals("eat food") || inputText.toLowerCase().equals("eat discarded food")) {
+				table.modifyProgress(mobile, 3);
 				return "You choke on a foosty crumb and drop to the floor dead GG";
 			}
 			else if (inputText.toLowerCase().equals("pick up food") || inputText.toLowerCase().equals("pick up discarded food")) {
+				table.modifyProgress(mobile, 3);
 				return "A virulent mould spreads up your arm consuming you completely. Your corpse drops to the floor with a thud muffled by a thick layer of furry mould";
 			}
 			else {
 				return "I dont understand that command";
 			}
+		}
+		if (table.getAreaProgress(mobile) == 3)
+		{
+			return "You struggle to " + inputText + ", as you find yourself to be unfortunately deceased. (Try restart)";
 		}
 		return "uh oh";
 	}

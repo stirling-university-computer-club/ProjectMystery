@@ -29,8 +29,8 @@ public class TwilioServlet extends HttpServlet {
 		HttpSession session = request.getSession(true);
 		String fromNumber = request.getParameter("From");
 		String includedMessage = request.getParameter("Body");
-		Game runGame = new Game();
-		String returnedMsg = runGame.parser(includedMessage);
+		WorkingGame runGame = new WorkingGame();
+		String returnedMsg = runGame.inputText(fromNumber, includedMessage);
 		try {
 			sendOutput(returnedMsg, fromNumber);
 		} catch (TwilioRestException e) {

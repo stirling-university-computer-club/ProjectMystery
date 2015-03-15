@@ -1,4 +1,4 @@
-package ourGame;
+package com.twilio;
 
 
 public class Launcher {
@@ -9,6 +9,11 @@ public class Launcher {
 		MessageSender msgSend = new MessageSender();
 		WorkingGame game = new WorkingGame();
 		System.out.println(game.inputText("1", "look"));
+		System.out.println(game.inputText("1", "start"));
+		System.out.println(game.inputText("1", "Go Right"));
+		System.out.println(game.inputText("1", "Eat Food"));
+		System.out.println(game.inputText("1", "Eat Food"));
+		System.out.println(game.inputText("1", "Restart"));
 	}
 	
 	public void makeMessageSender()

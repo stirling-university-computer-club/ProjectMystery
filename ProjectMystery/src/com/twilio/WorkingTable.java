@@ -1,4 +1,5 @@
-package ourGame;
+package com.twilio;
+
 
 import java.util.Hashtable;
 
@@ -23,14 +24,14 @@ public class WorkingTable {
 		}
 		
 		public void modifyProgress(String phoneNo, Integer progress) {
-			Integer check = phoneList.get(phoneList);
+			Integer check = phoneList.get(phoneNo);
 			if (check != null) {
-				check = progress;
+				phoneList.replace(phoneNo, progress);
 			}
 		}
 		
 		public int getAreaProgress(String phoneNo) {
-			Integer check = phoneList.get(phoneList);
+			Integer check = phoneList.get(phoneNo);
 			if (check !=  null) {
 				return check;
 			}
