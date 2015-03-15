@@ -1,7 +1,5 @@
 package com.twilio;
 
-import ourGame.*;
-
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -31,8 +29,10 @@ public class TwilioServlet extends HttpServlet {
 		HttpSession session = request.getSession(true);
 		String fromNumber = request.getParameter("From");
 		String includedMessage = request.getParameter("Body");
+		Game runGame = new Game();
+		String returnedMsg = runGame.parser(runGame.getAreas(), includedMessage);
 		try {
-			sendOutput(includedMessage, fromNumber);
+			sendOutput(returnedMsg, fromNumber);
 		} catch (TwilioRestException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
