@@ -24,7 +24,7 @@ public class PhoneProgressTable {
 	public void modifyProgress(String phoneNo, String progress) {
 		Game check = phoneList.get(phoneList);
 		if (check != null) {
-			check.parser(check.getAreas(), progress );
+			check.parser(progress );
 		}
 	}
 	

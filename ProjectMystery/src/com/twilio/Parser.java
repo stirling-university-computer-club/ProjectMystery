@@ -57,8 +57,7 @@ public class Parser {
 		return "Fail #1"; // This will never happen
 	}
 
-	public String logicCheck(Game gref, String c, ArrayList<Area> areas)
-			throws Exception {
+	public String logicCheck(Game gref, String c, ArrayList<Area> areas){
 
 		/**
 		 * This is an insane amount of busywork. So what we have here is making

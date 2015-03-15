@@ -51,17 +51,11 @@ public class Game {
 		return areas;
 	}
 
-	public String parser(ArrayList<Area> a, String s) {
+	public String parser(String s) {
 
 		String output =  "Yer dead ya dank memes";
 		if (!dead) {
-			try {
-				output = parser.logicCheck(this, s, a);
-			} catch (Exception e) {
-				e.printStackTrace();
-				output = "Now you've done it";
-			}
-			System.out.println(output);
+			output = parser.logicCheck(this, s, areas);
 			// Pass this back to the user.
 		}
 		return output;

@@ -30,7 +30,7 @@ public class TwilioServlet extends HttpServlet {
 		String fromNumber = request.getParameter("From");
 		String includedMessage = request.getParameter("Body");
 		Game runGame = new Game();
-		String returnedMsg = runGame.parser(runGame.getAreas(), includedMessage);
+		String returnedMsg = runGame.parser(includedMessage);
 		try {
 			sendOutput(returnedMsg, fromNumber);
 		} catch (TwilioRestException e) {
