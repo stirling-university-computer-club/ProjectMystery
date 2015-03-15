@@ -3,8 +3,9 @@ package ourGame;
 
 public class Launcher {
 	MessageSender msgSend;
+	Game game;
 	
-	public static void main(String[] args)
+	public Launcher()
 	{
 		MessageSender msgSend = new MessageSender();
 		Game game = new Game();

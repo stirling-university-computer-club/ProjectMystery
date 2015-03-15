@@ -37,19 +37,7 @@ public class TwilioServlet extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		}
-//		String message = fromName + " has messaged " + toNumber + " "
-//				+ String.valueOf(count) + " times.";
-		// Create a TwiML response and add our friendly message.
-//		TwiMLResponse twiml = new TwiMLResponse();
-//		Sms sms = new Sms(message);
-//		try {
-//			twiml.append(sms);
-//		} catch (TwiMLException e) {
-//			e.printStackTrace();
-//		}
-//		response.setContentType("application/xml");
-//		response.getWriter().print(twiml.toXML());
+	}
 	public void sendOutput(String gameOutput, String phoneNumber) throws TwilioRestException 
 	{
 		System.out.println(phoneNumber);
